@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-tjänst för färdtjänst | Vår Kommun</title>
+
+    <link rel="stylesheet" href="layout.css">
+
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!--Logotyp-->
+        <div class="logo_section">
+            <a href="index.html"><img class="header_logo" src="bilder/Logotyp.svg" alt="Vår Kommun logotyp"></a>
+
+            <!--Funktioner för lyssna & välj språk-->
+            <div class="support_functions">
+                <span class="listen"><a href="#"><img src="bilder/listen_icon.svg" alt="">&nbsp;Lyssna</a></span>
+                <span class="lang"><a href="#"><img src="bilder/globe.svg" alt="">&nbsp;Välj språk <img
+                            src="bilder/down.svg" alt=""></a></span>
+            </div>
+        </div>
+
+        <!--Navigering-->
+        <nav class="main_nav">
+            <ul>
+                <li><a class="nav_active" href="index.html">Startsida</a></li>
+                <li><a href="ansokan.html">Ansök om färdtjänst</a></li>
+                <li><a href="info.html">Information om färdtjänst</a></li>
+            </ul>
+            <button class="login_btn" onclick="window.location.href='login.html';"><img src="bilder/login.svg" alt="">&nbsp;Logga in</button> </nav>
+    </header>
+
+    <main>
+        <h1>Välkommen till E-tjänsten för färdtjänst!</h1>
+
+        <div class="text_box">
+            <p>Färdtjänst är till för fritidsresor och kan göras med antingen personbil eller specialfordon, så som
+                rullstolsbuss.
+                Det är viktigt att notera att färdtjänst inte bokas för resor till sjukhus eller vårdcentraler.
+                Efter en godkänd prövning kan personer med funktionsnedsättningar få färdtjänst.</p><br>
+
+            <p>Denna e-tjänst är utformad för att underlätta för dig som önskar ansöka om färdtjänst och
+                för dig som redan blivit beviljad färdtjänst. Följande tjänster tillhandahålls på denna sida:</p><br>
+
+            <ol>
+                <li>Ansök om färdtjänst</li>
+                <p class="p_ol">Om du ännu inte har beviljats färdtjänst kan du enkelt ansöka om det här. </p><br>
+                <li>Hantera dina resor</li>
+                <p class="p_ol">Om du har beviljats färdtjänst, erbjuder e-tjänsten en smidig plattform för att boka,
+                    avboka och hantera dina resor.
+                </p>
+            </ol>
+            <br>
+            <p class="p_red">För att boka en färdtjänstresa måste du vara inloggad.</p>
+        </div>
+        <div class="buttons">
+            <button class="pink_button" onclick="window.location.href='login.html';"><img src="bilder/login.svg" alt="">&nbsp;Logga in</button>
+            <button class="pink_button" onclick="window.location.href='ansokan.html';"><img src="bilder/application.svg" alt="">&nbsp;Ansök om färdtjänst</button>
+            <button class="pink_button" onclick="window.location.href='info.html';"><img src="bilder/info.svg" alt="">&nbsp;Information om färdtjänst</button>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div class="contact">
+            <h4>Kontakta oss</h4>
+            <div class="phone_mail"><img src="bilder/phone.svg" alt="">
+                <p class="p_small">Telefon: <a href="#">0322 - 00 90 92</a></p>
+            </div>
+            <div class="phone_mail"><img src="bilder/mail.svg" alt="">
+                <p class="p_small">E-post: <a href="mailto:kundservice@fardtjanst.se">kundservice@fardtjanst.se</a></p>
+            </div>
+        </div>
+
+        <nav class="footer_links">
+            <h4>Länkar</h4>
+            <ul>
+                <li><a href="ansokan.html">Ansök om färdtjänst</a></li>
+                <li><a href="info.html">Information om färdtjänst</a></li>
+                <li><a href="tillganglighet.html">Tillgänglighetsredogörelse</a></li>
+            </ul>
+        </nav>
+
+        <img class="logo_white" src="bilder/Logotyp_vit.svg" alt="Vår Kommun logotyp">
+    </footer>
+</body>
+
+</html>

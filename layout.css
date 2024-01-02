@@ -1,0 +1,308 @@
+/*GLOBAL*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+html {
+    font-family: 'Inter', Tahoma, sans-serif;
+}
+
+
+h1 {
+    font-size: 2.25em;
+    font-weight: bold;
+    color: #1B3D34;
+}
+
+h2 {
+    font-size: 2em;
+    color: black;
+}
+
+h3 {
+    font-size: 1.59em;
+    color: black;
+    max-width: 23em;
+}
+
+h4 {
+    font-size: 1.25em;
+    color: black;
+}
+
+h5 {
+    font-size: 1em;
+    color: black;
+}
+
+p {
+    font-size: 1.25em;
+    max-width: 30em;
+    line-height: 150%;
+    letter-spacing: 0.027em;
+}
+
+.p_small {
+    font-size: 1em;
+    margin-left: 0.25em;
+}
+
+.p_smaller {
+    font-size: 0.75em;
+    margin: 2em 0 0 10em;
+}
+
+.p_breadcrumbs {
+    font-size: 0.75em;
+    margin: 3em 0 0 11.6%;
+}
+
+.p_red {
+    color: red;
+    font-weight: 600;
+}
+
+.p_ol {
+    font-size: 1em;
+    font-weight: 400;
+    max-width: 25em;
+}
+
+ol {
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+.text_ul {
+    font-size: 1.25em;  
+    max-width: 30em;
+    line-height: 150%;
+}
+
+
+
+/*Huvudnavigering*/
+
+.logo_section {
+    max-height: 120px;
+}
+
+.header_logo {
+    max-width: 100px;
+    margin: 1% 0 1% 10%;
+    float: left;
+
+}
+
+/*Lyssna/Välj språk*/
+
+.support_functions {
+    display: flex;
+    float: right;
+    margin: 2.5% 10% 1% 0;
+}
+
+.listen {
+    margin: 0 1.2em;
+    align-items: center;
+}
+
+.support_functions a {
+    display: flex;
+    align-items: center;
+}
+
+/*navigeringsområde*/
+.main_nav {
+    display: flex;
+    background-color: #236151 ;
+    width: 100%;
+    list-style-type: none;
+    height: 50px;
+    align-items: center;
+}
+
+.main_nav ul {
+    margin-left: 6.8%;
+}
+
+.main_nav li {
+    display: inline;
+}
+
+.main_nav a {
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 30px;
+}
+
+.main_nav li a:hover {
+    background-color: #1B3D34;
+    text-decoration: underline;
+}
+
+.nav_active {
+    background-color:#1B3D34;
+    text-decoration: underline;
+}
+
+/*Logga in-knapp*/
+
+
+.login_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5% 10% 0.5% auto;
+    width: 8.7em;
+    background-color: #1B3D34;
+    color: #fff;
+    border: solid 1px;
+    border-color: black;
+    border-radius: 4px;
+    height: 2.4em;
+    font-weight: 600;
+    letter-spacing: 0.060em;
+    cursor: pointer;
+}
+
+.login_btn:hover {
+    text-decoration: underline;
+    background-color: #1e4138;
+}
+
+.login_btn img {
+    max-width: 1.6em;
+}
+
+/*Main content*/
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_box {
+    background-color: #f8f8f8;
+    padding: 2em;
+    margin: 2em 0;
+}
+
+main h1 {
+    margin-top: 2em;
+}
+
+.buttons {
+    display: inline-block;
+    width: 40em;
+    margin: 2em 0 7em;
+}
+
+
+/*Rosa knappar*/
+.pink_button {
+    display: flex;
+    background-color: #CE4070;
+    border: none;
+    color:#fff;
+    border-radius: 10px;
+    height: 3.5em;
+    min-width: 30em;
+    margin: 0.2em 1em;
+    font-weight:600;
+    font-size: 1.25em;
+    letter-spacing: 0.035em;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.pink_button:hover {
+    background-color: #9E254E;
+    text-decoration: underline;
+}
+
+.pink_button img {
+    max-width: 1.5em;
+}
+
+
+/*Footer*/
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(80px, auto);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #236151;
+    color: #fff;
+    line-height: 200%;
+}
+
+footer h4 {
+    color: white;
+}
+
+
+/*Länkar i footer*/
+
+footer ul {
+    list-style-type: none;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/*Footer sektion 1*/
+
+.contact {
+    display: inline-block;
+    margin: 2em 0 2em 28%;
+}
+
+.contact img {
+    max-width: 1.25em;
+}
+
+.phone_mail {
+    display: flex;
+    align-items: center;
+}
+
+/*Footer sektion 2*/
+.footer_links {
+    display: inline;
+    margin: 2em 0 2em 20%;
+}
+
+.footer_links h4 {
+    margin-left: 2em;
+}
+
+/*Footer sektion 3*/
+.logo_white {
+    max-width: 200px;
+    margin: 1.5em 0 2em 20%;
+}
+
+
+
+
