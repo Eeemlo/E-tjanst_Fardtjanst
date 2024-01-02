@@ -26,9 +26,10 @@ h1 {
 }
 
 h2 {
-    font-size: 1.8em;
+    font-size: 1.6em;
     color: black;
     max-width: 19em;
+    margin-bottom: 0.2em;
 }
 
 h3 {
