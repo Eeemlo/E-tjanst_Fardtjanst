@@ -7,7 +7,7 @@
     <title>E-tjänst för färdtjänst | Vår Kommun</title>
 
     <link rel="stylesheet" href="layout.css">
-    <script type="text/javascript" src="js.js" defer></script>
+    <script src="js.js" defer></script>
 
     <!--Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,12 +69,16 @@
         <div class="menu-bg" id="menu-bg"></div>
         <!--Slut på hamburgermeny-->
     </header>
+
+    <!--Breadcrumbs-->
     <div class="breadcrumbs_container">
         <p class="p_breadcrumbs"><a href="index.html">Startsida</a> / <a href="login.html">Logga in</a> / Mina sidor</p>
     </div>
 
     <main>
         <h1>Mina sidor</h1>
+
+        <!--Knappar-->
         <div class="buttons">
             <button class="pink_button" onclick="window.location.href='boka.html';"><img id="bankid"
                     src="bilder/boka.svg" alt="">&nbsp;Boka resa</button>
@@ -83,8 +87,6 @@
                     <button class="pink_button" onclick="window.location.href='index.html';"><img src="bilder/logout.svg"
                         alt="">&nbsp;Logga ut</button>
         </div>
-
-
     </main>
 
     <footer>
@@ -103,7 +105,7 @@
             <ul>
                 <li><a href="ansokan.html">Ansök om färdtjänst</a></li>
                 <li><a href="info.html">Information om färdtjänst</a></li>
-                <li><a href="tillganglighet.html">Tillgänglighetsredogörelse</a></li>
+                <li><a href="tillganglighet_inloggad.html">Tillgänglighetsredogörelse</a></li>
             </ul>
         </nav>
 

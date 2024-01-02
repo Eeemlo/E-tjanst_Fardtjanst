@@ -69,6 +69,7 @@
         <!--Slut på hamburgermeny-->
     </header>
 
+    <!--Breacrumbs-->
     <div class="breadcrumbs_container">
         <p class="p_breadcrumbs"><a href="index.html">Startsida</a> / <a href="mina_sidor.html">Mina sidor</a> / Boka
             resa</p>
@@ -77,14 +78,10 @@
     <main>
         <h1>Boka resa</h1>
 
+        <!--Formulär för bokning av resa-->
         <div class="wrapper">
-
-
-
-
             <h4>Bokningsdetaljer</h4>
             <div class="form">
-
                 <form class="booking">
                     <div class="form_row_1">
                         <p class="form_left"><label for="avresa">Avreseadress:</label><br>
@@ -140,7 +137,8 @@
                         </div>
 
                         <div class="content_box">
-                            <p class="check2" onclick="showDiv2();"><input type="checkbox" id="aterkommande" name="aterkommande">
+                            <p class="check2" onclick="showDiv2();"><input type="checkbox" id="aterkommande"
+                                    name="aterkommande">
                                 <label for="aterkommande">Gör till återkommande resa</label>
                             </p>
 
@@ -161,6 +159,7 @@
                 </form>
             </div>
 
+            <!--Knapp-->
             <div class="buttons">
                 <button class="pink_button" onclick="window.location.href='bokningsbekraftelse.html';"><img
                         src="bilder/check.svg" alt="">&nbsp;Boka resa</button>
@@ -184,34 +183,34 @@
             <ul>
                 <li><a href="ansokan.html">Ansök om färdtjänst</a></li>
                 <li><a href="info.html">Information om färdtjänst</a></li>
-                <li><a href="tillganglighet.html">Tillgänglighetsredogörelse</a></li>
+                <li><a href="tillganglighet_inloggad.html">Tillgänglighetsredogörelse</a></li>
             </ul>
         </nav>
 
         <img class="logo_white" src="bilder/Logotyp_vit.svg" alt="Vår Kommun logotyp">
     </footer>
-<script>
-    function showDiv1() {
-    let div = document.getElementById('returresa');
+    <script>
+        function showDiv1() {
+            let div = document.getElementById('returresa');
 
-    if (div.style.display === "none") {
-        div.style.display = "block";
-    } else {
-        div.style.display = "none";
-    }
-}
+            if (div.style.display === "none") {
+                div.style.display = "block";
+            } else {
+                div.style.display = "none";
+            }
+        }
 
-function showDiv2() {
-    let div = document.getElementById('intervall_aterkommande');
-    
-    if (div.style.display === "none") {
-        div.style.display = "block";
-    } else {
-        div.style.display = "none";
-    }
-}
+        function showDiv2() {
+            let div = document.getElementById('intervall_aterkommande');
 
-</script>
+            if (div.style.display === "none") {
+                div.style.display = "block";
+            } else {
+                div.style.display = "none";
+            }
+        }
+
+    </script>
 </body>
 
 

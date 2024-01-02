@@ -26,12 +26,13 @@ h1 {
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.8em;
     color: black;
+    max-width: 19em;
 }
 
 h3 {
-    font-size: 1.59em;
+    font-size: 1.4em;
     color: black;
     max-width: 23em;
 }

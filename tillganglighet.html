@@ -1,63 +1,142 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-tjänst för färdtjänst | Vår Kommun</title>
-    
+
     <link rel="stylesheet" href="layout.css">
+    <script src="js.js" defer></script>
 
     <!--Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <!--Logotyp-->
         <div class="logo_section">
-        <a href="index.html"><img class="header_logo" src="bilder/Logotyp.svg" alt="Vår Kommun logotyp"></a>
+            <a href="index.html"><img class="header_logo" src="bilder/Logotyp.svg" alt="Vår Kommun logotyp"></a>
 
-        <!--Funktioner för lyssna & välj språk-->
-        <div class="support_functions">
-        <span class="listen"><a href="#"><img src="bilder/listen_icon.svg" alt="">&nbsp;Lyssna</a></span>
-        <span class="lang"><a href="#"><img src="bilder/globe.svg" alt="">&nbsp;Välj språk <img src="bilder/down.svg" alt=""></a></span>
+            <!--Funktioner för lyssna & välj språk-->
+            <div class="support_functions">
+                <span class="listen"><a href="#"><img src="bilder/listen_icon.svg" alt="">&nbsp;Lyssna</a></span>
+                <span class="lang"><a href="#"><img src="bilder/globe.svg" alt="">&nbsp;Välj språk <img
+                            src="bilder/down.svg" alt=""></a></span>
+            </div>
         </div>
-    </div>
 
         <!--Navigering-->
         <nav class="main_nav">
-            <ul>
+            <ul class="large_nav">
                 <li><a href="index.html">Startsida</a></li>
                 <li><a href="ansokan.html">Ansök om färdtjänst</a></li>
                 <li><a href="info.html">Information om färdtjänst</a></li>
             </ul>
-            <a class="login" href="login.html"><button class="login_btn"><img src="bilder/login.svg" alt="">Logga in</button></a>
+            <button class="login_btn" onclick="window.location.href='login.html';"><img src="bilder/login.svg"
+                    alt="">Logga in</button>
+        </nav>
+
+        <!--Hamburgermeny-->
+        <div id="menu">
+
+            <div id="menu-bar" onclick="menuOnClick()">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+            </div>
+            <nav class="nav" id="nav">
+                <div class="bg_nav">
+                    <ul>
+                        <li><a href="index.html">Startsida</a></li>
+                        <li><a class="nav_active" href="ansokan.html">Ansök om färdtjänst</a></li>
+                        <li><a href="info.html">Information om färdtjänst</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="menu-bg" id="menu-bg"></div>
+        <!--Slut på hamburgermeny-->
+
     </header>
 
+    <!--Breadcrumbs-->
+    <div class="breadcrumbs_container">
+        <p class="p_breadcrumbs"><a href="index.html">Startsida</a> / Tillgänglighetsredogörelse</p>
+    </div>
+
+    <!--Main-->
     <main>
-        <h1>Välkommen</h1>
-    
+        <h1>Tillgänglighetsredogörelse</h1>
+
+        <div class="text_box">
+            <p>Vår Kommun står bakom den här webbplatsen. Vi vill att så många som möjligt ska kunna använda den. Det
+                här dokumentet beskriver hur Vår kommuns E-tjänst för bokning av färdtjänst uppfyller lagen om
+                tillgänglighet till digital offentlig service, eventuella kända tillgänglighetsproblem och hur du kan
+                rapportera brister till oss så att vi kan åtgärda dem.</p><br>
+            <h2>Hur tillgänglig är webbplatsen?</h2>
+            <p>Vi har inga kända brister i tillgängligheten för den här webbplatsen.</p><br>
+            <h2>Vad kan du göra om du inte kan använda delar av webbplatsen?</h2>
+            <p>Om du behöver innehåll från e-tjänsten för färdtjänstbokning som inte är tillgängligt för dig, men som är
+                undantaget från lagens tillämpningsområde enligt beskrivning nedan, kan du skicka e-post till
+                <a href="mailto:fardtjanst@varkommun.se">fardtjanst@varkommun.se</a> eller ringa telefonnummer 0322 - 00
+                90 92.
+            </p><br>
+            <h2>Rapportera brister i webbplatsens tillgänglighet</h2>
+            <p>Vi strävar hela tiden efter att förbättra webbplatsens tillgänglighet. Om du upptäcker problem som inte
+                är beskrivna på den här sidan, eller om du anser att vi inte uppfyller lagens krav, kontakta oss gärna
+                så att vi får veta att problemet finns.</p><br>
+            <h2>Tillsyn</h2>
+            <p>Myndigheten för digital förvaltning, Digg, har ansvaret för tillsyn över lagen om tillgänglighet till
+                digital offentlig service. Du kan <a href="https://www.digg.se/tdosanmalan">anmäla till Digg</a> om du
+                tycker att vår digitala service har brister i
+                tillgänglighet.</p><br>
+            <p>Du kan också <a href="https://www.digg.se/tdosanmalan">anmäla till Digg</a> om du tycker att vår
+                bedömning av vad som är oskäligt betungande ska
+                granskas, om du tycker att vår tillgänglighetsredogörelse har brister eller om du tycker att vi inte har
+                hanterat din begäran om tillgängliggörande korrekt.
+            </p><br>
+            <h2>Teknisk information om webbplatsens tillgänglighet</h2>
+            <p>Den här webbplatsen är helt förenlig med lagen om tillgänglighet till digital offentlig service. </p><br>
+            <h2>Hur vi testat webbplatsen</h2>
+            <p>Vi har gjort en självskattning (intern testning) av Vår kommuns e-tjänst för bokning av färdtjänst.</p>
+            <br>
+
+            <ul class="text_ul">
+                <li>Senaste bedömningen gjordes den 2e januari 2024.</li>
+                <li>Webbplatsen publicerades den 2e januari 2024.</li>
+                <li>Redogörelsen uppdaterades senast den 2e januari 2024.</li>
+            </ul>
+        </div>
 
     </main>
 
     <footer>
         <div class="contact">
-        <h4>Kontakta oss</h4>
-        <span class="phone_mail"><img src="bilder/phone.svg" alt=""><p class="p_small">&nbsp; Telefon: <a href="#">0322 - 00 90 92</a></p></span>
-        <span class="phone_mail"><img src="bilder/mail.svg" alt=""><p class="p_small"> E-post: <a href="mailto:kundservice@fardtjanst.se">kundservice@fardtjanst.se</a></p></span>
-    </div>
+            <h4>Kontakta oss</h4>
+            <div class="phone_mail"><img src="bilder/phone.svg" alt="">
+                <p class="p_small">Telefon: <a href="#">0322 - 00 90 92</a></p>
+            </div>
+            <div class="phone_mail"><img src="bilder/mail.svg" alt="">
+                <p class="p_small">E-post: <a href="mailto:kundservice@fardtjanst.se">kundservice@fardtjanst.se</a></p>
+            </div>
+        </div>
 
-    <nav class="footer_links">
-        <h4>Länkar</h4>
-        <ul>
-            <li><a href="ansokan.html">Ansök om färdtjänst</a></li>
-            <li><a href="info.html">Information om färdtjänst</a></li>
-            <li><a href="tillganglighet.html">Tillgänglighetsredogörelse</a></li>
-        </ul>
-    </nav>
+        <nav class="footer_links">
+            <h4>Länkar</h4>
+            <ul>
+                <li><a href="ansokan.html">Ansök om färdtjänst</a></li>
+                <li><a href="info.html">Information om färdtjänst</a></li>
+                <li><a href="tillganglighet.html">Tillgänglighetsredogörelse</a></li>
+            </ul>
+        </nav>
 
-<img class="logo_white" src="bilder/Logotyp_vit.svg" alt="Vår Kommun logotyp">
+        <img class="logo_white" src="bilder/Logotyp_vit.svg" alt="Vår Kommun logotyp">
     </footer>
 </body>
+
 </html>
