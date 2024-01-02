@@ -1,50 +1,80 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-tjänst för färdtjänst | Vår Kommun</title>
-    
+
     <link rel="stylesheet" href="layout.css">
+    <script type="text/javascript" src="js.js" defer></script>
 
     <!--Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <!--Logotyp-->
         <div class="logo_section">
-        <a href="index.html"><img class="header_logo" src="bilder/Logotyp.svg" alt="Vår Kommun logotyp"></a>
+            <a href="index.html"><img class="header_logo" src="bilder/Logotyp.svg" alt="Vår Kommun logotyp"></a>
 
-        <!--Funktioner för lyssna & välj språk-->
-        <div class="support_functions">
-        <span class="listen"><a href="#"><img src="bilder/listen_icon.svg" alt="">&nbsp;Lyssna</a></span>
-        <span class="lang"><a href="#"><img src="bilder/globe.svg" alt="">&nbsp;Välj språk <img src="bilder/down.svg" alt=""></a></span>
+            <!--Funktioner för lyssna & välj språk-->
+            <div class="support_functions">
+                <span class="listen"><a href="#"><img src="bilder/listen_icon.svg" alt="">&nbsp;Lyssna</a></span>
+                <span class="lang"><a href="#"><img src="bilder/globe.svg" alt="">&nbsp;Välj språk <img
+                            src="bilder/down.svg" alt=""></a></span>
+            </div>
         </div>
-    </div>
 
         <!--Navigering-->
         <nav class="main_nav">
-            <ul>
+            <ul class="large_nav">
                 <li><a href="index.html">Startsida</a></li>
                 <li><a href="ansokan.html">Ansök om färdtjänst</a></li>
                 <li><a href="info.html">Information om färdtjänst</a></li>
             </ul>
-<button class="login_btn" onclick="window.location.href='login.html';"><img src="bilder/login.svg" alt="">Logga in</button>
-</nav>
+            <button class="login_btn" onclick="window.location.href='login.html';"><img src="bilder/login.svg"
+                    alt="">Logga in</button>
+        </nav>
+
+
+        <!--Hamburgermeny-->
+        <div id="menu">
+
+            <div id="menu-bar" onclick="menuOnClick()">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+            </div>
+            <nav class="nav" id="nav">
+                <div class="bg_nav">
+                    <ul>
+                        <li><a href="index.html">Startsida</a></li>
+                        <li><a href="ansokan.html">Ansök om färdtjänst</a></li>
+                        <li><a href="info.html">Information om färdtjänst</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="menu-bg" id="menu-bg"></div>
+        <!--Slut på hamburgermeny-->
     </header>
     <div class="breadcrumbs_container">
         <p class="p_breadcrumbs"><a href="index.html">Startsida</a> / Logga in</p>
     </div>
     <main>
-    
+
         <h1>Logga in</h1>
-    
+
         <div class="buttons">
-            <button class="pink_button" onclick="window.location.href='mina_sidor.html';"><img id="bankid" src="bilder/bankid_logo_white.svg" alt="">&nbsp;Logga in med BankID</button>
-            <button class="pink_button" onclick="window.location.href='mina_sidor.html';"><img src="bilder/login.svg" alt="">&nbsp;Logga in med personlig kod</button>
+            <button class="pink_button" onclick="window.location.href='mina_sidor.html';"><img id="bankid"
+                    src="bilder/bankid_logo_white.svg" alt="">&nbsp;Logga in med BankID</button>
+            <button class="pink_button" onclick="window.location.href='mina_sidor.html';"><img src="bilder/login.svg"
+                    alt="">&nbsp;Logga in med personlig kod</button>
         </div>
 
 
@@ -52,21 +82,26 @@
 
     <footer>
         <div class="contact">
-        <h4>Kontakta oss</h4>
-        <span class="phone_mail"><img src="bilder/phone.svg" alt=""><p class="p_small">Telefon: <a href="#">0322 - 00 90 92</a></p></span>
-        <span class="phone_mail"><img src="bilder/mail.svg" alt=""><p class="p_small">E-post: <a href="mailto:kundservice@fardtjanst.se">kundservice@fardtjanst.se</a></p></span>
-    </div>
+            <h4>Kontakta oss</h4>
+            <div class="phone_mail"><img src="bilder/phone.svg" alt="">
+                <p class="p_small">Telefon: <a href="#">0322 - 00 90 92</a></p>
+            </div>
+            <div class="phone_mail"><img src="bilder/mail.svg" alt="">
+                <p class="p_small">E-post: <a href="mailto:kundservice@fardtjanst.se">kundservice@fardtjanst.se</a></p>
+            </div>
+        </div>
 
-    <nav class="footer_links">
-        <h4>Länkar</h4>
-        <ul>
-            <li><a href="ansokan.html">Ansök om färdtjänst</a></li>
-            <li><a href="info.html">Information om färdtjänst</a></li>
-            <li><a href="tillganglighet.html">Tillgänglighetsredogörelse</a></li>
-        </ul>
-    </nav>
+        <nav class="footer_links">
+            <h4>Länkar</h4>
+            <ul>
+                <li><a href="ansokan.html">Ansök om färdtjänst</a></li>
+                <li><a href="info.html">Information om färdtjänst</a></li>
+                <li><a href="tillganglighet.html">Tillgänglighetsredogörelse</a></li>
+            </ul>
+        </nav>
 
-<img class="logo_white" src="bilder/Logotyp_vit.svg" alt="Vår Kommun logotyp">
+        <img class="logo_white" src="bilder/Logotyp_vit.svg" alt="Vår Kommun logotyp">
     </footer>
 </body>
+
 </html>

@@ -1,69 +1,218 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-tjänst för färdtjänst | Vår Kommun</title>
-    
+
     <link rel="stylesheet" href="layout.css">
+    <script type="text/javascript" src="js.js" defer></script>
 
     <!--Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
     <header>
         <!--Logotyp-->
         <div class="logo_section">
-        <a href="index.html"><img class="header_logo" src="bilder/Logotyp.svg" alt="Vår Kommun logotyp"></a>
+            <a href="index.html"><img class="header_logo" src="bilder/Logotyp.svg" alt="Vår Kommun logotyp"></a>
 
-        <!--Funktioner för lyssna & välj språk-->
-        <div class="support_functions">
-        <span class="listen"><a href="#"><img src="bilder/listen_icon.svg" alt="">&nbsp;Lyssna</a></span>
-        <span class="lang"><a href="#"><img src="bilder/globe.svg" alt="">&nbsp;Välj språk <img src="bilder/down.svg" alt=""></a></span>
+            <!--Funktioner för lyssna & välj språk-->
+            <div class="support_functions">
+                <span class="listen"><a href="#"><img src="bilder/listen_icon.svg" alt="">&nbsp;Lyssna</a></span>
+                <span class="lang"><a href="#"><img src="bilder/globe.svg" alt="">&nbsp;Välj språk <img
+                            src="bilder/down.svg" alt=""></a></span>
+            </div>
         </div>
-    </div>
 
         <!--Navigering-->
         <nav class="main_nav">
-            <ul>
-                <li><a href="index.html">Startsida</a></li>
-                <li><a href="ansokan.html">Ansök om färdtjänst</a></li>
-                <li><a href="info.html">Information om färdtjänst</a></li>
-                <li><a href="boka.html">Boka resa</a></li>
+            <ul class="large_nav">
+                <li><a href="startsida_inloggad.html">Startsida</a></li>
+                <li><a href="ansokan_inloggad.html">Ansök om färdtjänst</a></li>
+                <li><a href="info_inloggad.html">Information om färdtjänst</a></li>
+                <li><a class="nav_active" href="boka.html">Boka resa</a></li>
                 <li><a href="mina_resor.html">Mina inbokade resor</a></li>
             </ul>
-<button class="login_btn"><img src="bilder/person.svg" alt="">Mina sidor</button>
-</nav>
+            <button class="login_btn" onclick="window.location.href='mina_sidor.html';"><img src="bilder/person.svg"
+                    alt="">Mina sidor</button>
+        </nav>
+
+        <!--Hamburgermeny-->
+        <div id="menu">
+
+            <div id="menu-bar" onclick="menuOnClick()">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+            </div>
+            <nav class="nav" id="nav">
+                <div class="bg_nav">
+                    <ul>
+                        <li><a href="startsida_inloggad.html">Startsida</a></li>
+                        <li><a href="ansokan_inloggad.html">Ansök om färdtjänst</a></li>
+                        <li><a href="info_inloggad.html">Information om färdtjänst</a></li>
+                        <li><a class="nav_active" href="boka.html">Boka resa</a></li>
+                        <li><a href="mina_resor.html">Mina inbokade resor</a></li>
+                        <li><a href="index.html"><img src="bilder/logout.svg" alt="">&nbsp;Logga ut</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="menu-bg" id="menu-bg"></div>
+        <!--Slut på hamburgermeny-->
     </header>
+
     <div class="breadcrumbs_container">
-        <p class="p_breadcrumbs"><a href="index.html">Startsida</a> / </p>
+        <p class="p_breadcrumbs"><a href="index.html">Startsida</a> / <a href="mina_sidor.html">Mina sidor</a> / Boka
+            resa</p>
     </div>
 
     <main>
-        <h1>Välkommen</h1>
-    
+        <h1>Boka resa</h1>
 
+        <div class="wrapper">
+
+
+
+
+            <h4>Bokningsdetaljer</h4>
+            <div class="form">
+
+                <form class="booking">
+                    <div class="form_row_1">
+                        <p class="form_left"><label for="avresa">Avreseadress:</label><br>
+                            <input type="text" id="avresa" name="avresa">
+                        </p><br>
+
+                        <p class="form_right"><label for="destination">Destinationsadress:</label><br>
+                            <input type="text" id="destination" name="destination">
+                        </p><br>
+                    </div>
+                    <div class="form_row_2">
+                        <p><label for="datum">Datum för avresa:</label><br>
+                            <input type="date" id="datum" name="datum">
+                        </p><br>
+
+                        <p><label for="tid">Tid för avresa:</label><br>
+                            <input type="time" id="tid" name="tid">
+                        </p><br>
+                    </div>
+                    <div class="form_row_3">
+                        <p><label for="antal">Antal medresenärer:</label><br>
+                            <select name="antal" id="antal">
+                                <option value="ensam">Jag reser själv</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </p><br>
+                        <div class="double_checkbox">
+                            <p><input type="checkbox" id="djur" name="djur">
+                                <label for="djur">Djur medföljer på resa</label>
+                            </p>
+
+
+                            <p><input type="checkbox" id="rullstol" name="rullstol">
+                                <label for="rullstol">Rullstolsanpassad bil krävs</label>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="full_row">
+                        <div class="content_box">
+                            <p class="check1" onclick="showDiv1();"><input type="checkbox" id="retur" name="retur">
+                                <label for="retur">Lägg till returresa</label>
+                            </p>
+                            <div class="returresa" id="returresa">
+                                <p><label for="tid_retur">Tid för returresa:</label><br>
+                                    <input type="time" id="tid_retur" name="tid_retur">
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="content_box">
+                            <p class="check2" onclick="showDiv2();"><input type="checkbox" id="aterkommande" name="aterkommande">
+                                <label for="aterkommande">Gör till återkommande resa</label>
+                            </p>
+
+                            <div class="intervall_aterkommande" id="intervall_aterkommande">
+
+                                <p><label for="intervall">I vilket intervall ska resan upprepas?</label><br>
+                                    <select name="intervall" id="intervall">
+                                        <option value="dag">Varje dag</option>
+                                        <option value="vecka">Varje vecka</option>
+                                        <option value="manad">Varje månad</option>
+                                    </select>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div><br>
+
+                </form>
+            </div>
+
+            <div class="buttons">
+                <button class="pink_button" onclick="window.location.href='bokningsbekraftelse.html';"><img
+                        src="bilder/check.svg" alt="">&nbsp;Boka resa</button>
+            </div>
+        </div>
     </main>
 
     <footer>
         <div class="contact">
-        <h4>Kontakta oss</h4>
-        <span class="phone_mail"><img src="bilder/phone.svg" alt=""><p class="p_small">Telefon: <a href="#">0322 - 00 90 92</a></p></span>
-        <span class="phone_mail"><img src="bilder/mail.svg" alt=""><p class="p_small">E-post: <a href="mailto:kundservice@fardtjanst.se">kundservice@fardtjanst.se</a></p></span>
-    </div>
+            <h4>Kontakta oss</h4>
+            <div class="phone_mail"><img src="bilder/phone.svg" alt="">
+                <p class="p_small">Telefon: <a href="#">0322 - 00 90 92</a></p>
+            </div>
+            <div class="phone_mail"><img src="bilder/mail.svg" alt="">
+                <p class="p_small">E-post: <a href="mailto:kundservice@fardtjanst.se">kundservice@fardtjanst.se</a></p>
+            </div>
+        </div>
 
-    <nav class="footer_links">
-        <h4>Länkar</h4>
-        <ul>
-            <li><a href="ansokan.html">Ansök om färdtjänst</a></li>
-            <li><a href="info.html">Information om färdtjänst</a></li>
-            <li><a href="tillganglighet.html">Tillgänglighetsredogörelse</a></li>
-        </ul>
-    </nav>
+        <nav class="footer_links">
+            <h4>Länkar</h4>
+            <ul>
+                <li><a href="ansokan.html">Ansök om färdtjänst</a></li>
+                <li><a href="info.html">Information om färdtjänst</a></li>
+                <li><a href="tillganglighet.html">Tillgänglighetsredogörelse</a></li>
+            </ul>
+        </nav>
 
-<img class="logo_white" src="bilder/Logotyp_vit.svg" alt="Vår Kommun logotyp">
+        <img class="logo_white" src="bilder/Logotyp_vit.svg" alt="Vår Kommun logotyp">
     </footer>
+<script>
+    function showDiv1() {
+    let div = document.getElementById('returresa');
+
+    if (div.style.display === "none") {
+        div.style.display = "block";
+    } else {
+        div.style.display = "none";
+    }
+}
+
+function showDiv2() {
+    let div = document.getElementById('intervall_aterkommande');
+    
+    if (div.style.display === "none") {
+        div.style.display = "block";
+    } else {
+        div.style.display = "none";
+    }
+}
+
+</script>
 </body>
+
+
 </html>

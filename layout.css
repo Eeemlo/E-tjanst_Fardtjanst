@@ -12,6 +12,12 @@ html {
     font-family: 'Inter', Tahoma, sans-serif;
 }
 
+body {
+    height: 100vh;
+    overflow-x: hidden;
+
+}
+
 
 h1 {
     font-size: 2.25em;
@@ -54,7 +60,7 @@ p {
 
 .p_smaller {
     font-size: 0.75em;
-    margin: 2em 0 0 10em;
+    margin: 1em auto;
 }
 
 .p_breadcrumbs {
@@ -73,23 +79,82 @@ p {
     max-width: 25em;
 }
 
+.p_list {
+    font-weight: 600;
+    margin-left: 1.5em;
+}
+
+.p_margin {
+    margin-left: 2.6em;
+    max-width: 25em;
+}
+
+.p_bold {
+    font-weight: 600;
+}
+
 ol {
     font-size: 1.25em;
     font-weight: 600;
 }
 
 .text_ul {
-    font-size: 1.25em;  
+    font-size: 1.25em;
     max-width: 30em;
     line-height: 150%;
 }
 
+.text_ul li {
+    margin: 0.7em 0;
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.75em;
+    }
+
+    h3 {
+        font-size: 1.4em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .p_small {
+        font-size: 0.8em;
+    }
+
+    .p_smaller {
+        font-size: 0.75em;
+        margin: 1em auto;
+    }
+
+    .p_red {
+        color: red;
+        font-weight: 600;
+    }
+
+
+    ol {
+        font-size: 1em;
+    }
+
+    .text_ul {
+        font-size: 1em;
+    }
+}
 
 
 /*Huvudnavigering*/
 
 .logo_section {
     max-height: 120px;
+    background-color: #fff;
 }
 
 .header_logo {
@@ -120,7 +185,7 @@ ol {
 /*navigeringsområde*/
 .main_nav {
     display: flex;
-    background-color: #236151 ;
+    background-color: #236151;
     width: 100%;
     list-style-type: none;
     height: 50px;
@@ -149,8 +214,137 @@ ol {
 }
 
 .nav_active {
-    background-color:#1B3D34;
+    background-color: #1B3D34;
     text-decoration: underline;
+}
+
+#menu {
+    display: none;
+}
+
+@media screen and (max-width: 1390px) {
+
+
+    .large_nav {
+        display: none;
+    }
+
+    /*Hamburgermeny*/
+    #menu {
+        display: inline-block;
+        z-index: 10;
+        width: 100%;
+    }
+
+    #menu-bar {
+        width: 45px;
+        height: 40px;
+        margin: -32px 0 20px 10%;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .bar {
+        height: 5px;
+        width: 100%;
+        background-color: #fff;
+        display: block;
+        border-radius: 5px;
+        transition: 0.3s ease;
+    }
+
+    #bar1 {
+        transform: translateY(-4px);
+    }
+
+    #bar3 {
+        transform: translateY(4px);
+    }
+
+    .nav {
+        transition: 0.3s ease;
+        display: none;
+        background-color: #236151;
+    }
+
+    .nav ul {
+        margin: -36px;
+        padding: 2em 0 2em 35px;
+        float: left;
+        background-color: #236151;
+        height: auto;
+        width: 109%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .nav li {
+        list-style: none;
+        transition: 0.9s ease;
+        text-align: left;
+    }
+
+    .nav li a {
+        color: #fafafa;
+        width: 14em;
+        height: 4em;
+        font-size: 1.25em;
+        text-decoration: none;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+    }
+
+
+    .nav li a:hover {
+        background-color: #1e4138;
+        text-decoration: underline;
+    }
+
+    .menu-bg,
+    #menu {
+        right: 0;
+        position: absolute;
+    }
+
+
+
+    .change {
+        display: block;
+    }
+
+    .change .bar {
+        background-color: #fafafa;
+    }
+
+    .change #bar1 {
+        transform: translateY(4px) rotateZ(-45deg);
+    }
+
+    .change #bar2 {
+        opacity: 0;
+    }
+
+    .change #bar3 {
+        transform: translateY(-6px) rotateZ(45deg);
+    }
+
+    .change-bg {
+        margin-top: 130px;
+        width: 30em;
+        height: 90%;
+        transform: translate(-50%, -25%);
+        float: left;
+    }
+
+    header ul li img {
+        max-width: 1.8em;
+    }
+
+    /*Slut på hamburgermeny*/
+
 }
 
 /*Logga in-knapp*/
@@ -188,12 +382,14 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 60vh;
+    padding-left: 1em;
 }
 
 .text_box {
     background-color: #f8f8f8;
     padding: 2em;
-    margin: 2em 0;
+    margin: 2em 1em;
 }
 
 main h1 {
@@ -202,8 +398,9 @@ main h1 {
 
 .buttons {
     display: inline-block;
-    width: 40em;
-    margin: 2em 0 7em;
+    max-width: 40em;
+    width: 100%;
+    margin: 2em 1em 7em;
 }
 
 
@@ -212,12 +409,13 @@ main h1 {
     display: flex;
     background-color: #CE4070;
     border: none;
-    color:#fff;
+    color: #fff;
     border-radius: 10px;
     height: 3.5em;
-    min-width: 30em;
+    width: 90%;
+    max-width: 30em;
     margin: 0.2em 1em;
-    font-weight:600;
+    font-weight: 600;
     font-size: 1.25em;
     letter-spacing: 0.035em;
     cursor: pointer;
@@ -235,6 +433,203 @@ main h1 {
 }
 
 
+/*Information om färdtjänst*/
+
+/*Frågesektion*/
+.accordion {
+    max-width: 700px;
+    margin: 20px 0 60px;
+}
+
+.accordion .content_box {
+    position: relative;
+    margin: 10px 20px;
+}
+
+.accordion .content_box .label {
+    position: relative;
+    padding: 18px;
+    background-color: #ce4070;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+    min-height: 2em;
+    font-weight: 600;
+    font-size: 1.25em;
+}
+
+.accordion .content_box .label:before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+}
+
+.accordion .content_box.active .label:before {
+    content: '-';
+}
+
+.accordion .content_box .content {
+    position: relative;
+    background-color: #F7F7F7;
+    height: 0;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.accordion .content_box.active .content {
+    min-height: 15px;
+    height: auto;
+    padding: 20px;
+}
+
+.accordion .content_box .content p {
+    margin: 1em;
+}
+
+/*Formulär*/
+
+.wrapper {
+    margin-top: 2em;
+}
+
+form {
+    max-width: 900px;
+    width: 100%;
+    margin: 3em auto 1em;
+}
+
+
+.form_row_1,
+.form_row_2,
+.form_row_3 {
+    display: flex;
+}
+
+.form_row_1 input,
+.form_row_2 input,
+.form_row_3 #antal,
+#tid_retur,
+#intervall {
+    width: 25em;
+    height: 2.5em;
+    font-family: 'Inter';
+    font-size: 0.90em;
+    margin: 0.5em;
+}
+
+
+form div {
+    margin: 1.2em 0;
+}
+
+.returresa,
+.intervall_aterkommande {
+    display: none;
+}
+
+
+.double_checkbox {
+    margin-top: 1.9em;
+    margin-left: 0.5em;
+}
+
+.full_row .content_box.active .form_content {
+    min-height: 15px;
+    height: auto;
+    padding: 20px;
+}
+
+/*Media queries för formulär*/
+
+@media screen and (max-width: 980px) {
+
+    .form_row_1,
+    .form_row_2,
+    .form_row_3 {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .form_row_1 input,
+    .form_row_2 input,
+    .form_row_3 #antal,
+    #tid_retur,
+    #intervall {
+        width: 22em;
+        height: 2.5em;
+        font-family: 'Inter';
+        font-size: 0.75em;
+    }
+}
+
+/*Bokningsbekräftelse*/
+
+.img_check {
+    max-width: 10em;
+}
+
+/*Inbokade resor*/
+
+.bokad_resa1,
+.bokad_resa2 {
+    display: inline-block;
+    margin: 1em 0;
+}
+
+.reseinfo {
+    display: flex;
+    margin: 1em;
+}
+
+
+/*Avboka & Ändra-knappar*/
+
+.resa_buttons {
+    display: flex;
+}
+
+.red_button,
+.green_button {
+    display: flex;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    height: 2.5em;
+    width: 90%;
+    max-width: 10em;
+    margin: 0.2em 0.2em;
+    font-weight: 600;
+    font-size: 1.1em;
+    letter-spacing: 0.035em;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.red_button {
+    background-color: #c30000;
+}
+
+.green_button {
+    background-color: #236151;
+}
+
+.red_button:hover,
+.green_button:hover {
+    text-decoration: underline;
+}
+
+.red_button img,
+.green_button img {
+    max-width: 1.2em;
+}
+
 /*Footer*/
 
 footer {
@@ -243,7 +638,6 @@ footer {
     grid-auto-rows: minmax(80px, auto);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    max-width: 1920px;
     width: 100%;
     margin: 0 auto;
     background-color: #236151;
@@ -254,6 +648,7 @@ footer {
 footer h4 {
     color: white;
 }
+
 
 
 /*Länkar i footer*/
@@ -303,6 +698,61 @@ footer a:hover {
     margin: 1.5em 0 2em 20%;
 }
 
+@media screen and (max-width: 990px) {
+    footer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /*Footer sektion 1*/
+
+    .contact {
+        margin: 2em 0 2em 28%;
+    }
+
+    /*Footer sektion 2*/
+    .footer_links {
+        margin: 2em 0 2em 28%;
+    }
+
+    .footer_links li {
+        margin-left: -6%;
+    }
+
+    .footer_links h4 {
+        margin-left: 0%;
+    }
+
+    /*Footer sektion 3*/
+    .logo_white {
+        margin: 1.5em 0 2em 28%;
+    }
+}
+
+@media screen and (max-width: 500px) {
 
 
+    /*Footer sektion 1*/
 
+    .contact {
+        margin: 2em 0 2em 10%;
+    }
+
+    /*Footer sektion 2*/
+    .footer_links {
+        margin: 2em 0 2em 10%;
+    }
+
+    .footer_links li {
+        margin-left: -11%;
+    }
+
+    .footer_links h4 {
+        margin-left: 0%;
+    }
+
+    /*Footer sektion 3*/
+    .logo_white {
+        margin: 1.5em 0 2em 10%;
+    }
+
+}

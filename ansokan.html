@@ -1,39 +1,67 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-tjänst för färdtjänst | Vår Kommun</title>
-    
+
     <link rel="stylesheet" href="layout.css">
+    <script type="text/javascript" src="js.js" defer></script>
 
     <!--Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <!--Logotyp-->
         <div class="logo_section">
-        <a href="index.html"><img class="header_logo" src="bilder/Logotyp.svg" alt="Vår Kommun logotyp"></a>
+            <a href="index.html"><img class="header_logo" src="bilder/Logotyp.svg" alt="Vår Kommun logotyp"></a>
 
-        <!--Funktioner för lyssna & välj språk-->
-        <div class="support_functions">
-        <span class="listen"><a href="#"><img src="bilder/listen_icon.svg" alt="">&nbsp;Lyssna</a></span>
-        <span class="lang"><a href="#"><img src="bilder/globe.svg" alt="">&nbsp;Välj språk <img src="bilder/down.svg" alt=""></a></span>
+            <!--Funktioner för lyssna & välj språk-->
+            <div class="support_functions">
+                <span class="listen"><a href="#"><img src="bilder/listen_icon.svg" alt="">&nbsp;Lyssna</a></span>
+                <span class="lang"><a href="#"><img src="bilder/globe.svg" alt="">&nbsp;Välj språk <img
+                            src="bilder/down.svg" alt=""></a></span>
+            </div>
         </div>
-    </div>
 
         <!--Navigering-->
         <nav class="main_nav">
-            <ul>
+            <ul class="large_nav">
                 <li><a href="index.html">Startsida</a></li>
                 <li><a class="nav_active" href="ansokan.html">Ansök om färdtjänst</a></li>
                 <li><a href="info.html">Information om färdtjänst</a></li>
             </ul>
-<button class="login_btn" onclick="window.location.href='login.html';"><img src="bilder/login.svg" alt="">Logga in</button>
-</nav>
+            <button class="login_btn" onclick="window.location.href='login.html';"><img src="bilder/login.svg"
+                    alt="">Logga in</button>
+        </nav>
+
+        <!--Hamburgermeny-->
+        <div id="menu">
+
+            <div id="menu-bar" onclick="menuOnClick()">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+            </div>
+            <nav class="nav" id="nav">
+                <div class="bg_nav">
+                    <ul>
+                        <li><a href="index.html">Startsida</a></li>
+                        <li><a class="nav_active" href="ansokan.html">Ansök om färdtjänst</a></li>
+                        <li><a href="info.html">Information om färdtjänst</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="menu-bg" id="menu-bg"></div>
+        <!--Slut på hamburgermeny-->
+
     </header>
 
     <div class="breadcrumbs_container">
@@ -44,66 +72,77 @@
         <h1>Ansök om färdtjänst</h1>
 
         <div class="text_box">
-            <p>För att påbörja en ansökan om färdtjänst via e-tjänsten behöver du ha en E-legitimation. 
+            <p>För att påbörja en ansökan om färdtjänst via e-tjänsten behöver du ha en E-legitimation.
                 Du kan läsa mer om hur du skaffar E-legitimation på Skatteverkets hemsida. </p><br>
 
-             <h3>Innan du påbörjar din ansökan ber vi dig att läsa igenom nedanstående information.</h3><br>
+            <h3>Innan du påbörjar din ansökan ber vi dig att läsa igenom nedanstående information.</h3><br>
 
-             <h3>Färdtjänst</h3>      
-            <p>Färdtjänst är särskilt anordnade transporter för personer med funktionshinder och regleras genom lag (1997:736) 
-                om färdtjänst. För att beviljas färdtjänst ska du ha ett varaktigt funktionshinder som ger dig väsentliga svårigheter 
+            <h3>Färdtjänst</h3>
+            <p>Färdtjänst är särskilt anordnade transporter för personer med funktionshinder och regleras genom lag
+                (1997:736)
+                om färdtjänst. För att beviljas färdtjänst ska du ha ett varaktigt funktionshinder som ger dig
+                väsentliga svårigheter
                 att förflytta dig på egen hand eller svårigheter att resa med allmänna kommunikationer. </p><br>
 
-                <h3>Krav för att få färdtjänst beviljat</h3>
-                <ul class="text_ul">
-                    <li>Du ska vara folkbokförd i vår kommun.</li>
-                    <li>Du ska ha väsentliga svårigheter att förflytta dig på egen hand eller att resa med allmänna kommunikationer.</li>
-                    <li>Du ska ha en funktionsnedsättning som är bestående i minst tre månader.</li>
-                </ul><br>
-                
-                
-                <h3>Läkarutlåtande</h3>
-                <p>Om de är första gången du ansöker om färdtjänst behöver du skicka med ett läkarutlåtande. 
-                    I utlåtandet ska det framgå: </p><br>
-                    <ul class="text_ul">
-                        <li>din diagnos</li>
-                        <li>en beskrivning av dina medicinska problem</li>
-                        <li>en beskrivning av hur din diagnos påverkar din förmåga att förflytta dig på egen hand och din förmåga att resa med den allmänna kollektivtrafiken.</li>
-                    </ul><br>
+            <h3>Krav för att få färdtjänst beviljat</h3>
+            <ul class="text_ul">
+                <li>Du ska vara folkbokförd i vår kommun.</li>
+                <li>Du ska ha väsentliga svårigheter att förflytta dig på egen hand eller att resa med allmänna
+                    kommunikationer.</li>
+                <li>Du ska ha en funktionsnedsättning som är bestående i minst tre månader.</li>
+            </ul><br>
 
-                    <h3>Ledsagare</h3>
-                    <p>Du som behöver hjälp i fordonet under själva resan kan ansöka om tillstånd för ledsagare. </p><br>
 
-                    <h3>Specialfordon</h3>
-                    <p>Du som inte kan genomföra resan med färdtjänst på annat sätt än sittande i din rullstol kan ansöka om tillstånd för specialfordon. </p>
+            <h3>Läkarutlåtande</h3>
+            <p>Om de är första gången du ansöker om färdtjänst behöver du skicka med ett läkarutlåtande.
+                I utlåtandet ska det framgå: </p><br>
+            <ul class="text_ul">
+                <li>din diagnos</li>
+                <li>en beskrivning av dina medicinska problem</li>
+                <li>en beskrivning av hur din diagnos påverkar din förmåga att förflytta dig på egen hand och din
+                    förmåga att resa med den allmänna kollektivtrafiken.</li>
+            </ul><br>
+
+            <h3>Ledsagare</h3>
+            <p>Du som behöver hjälp i fordonet under själva resan kan ansöka om tillstånd för ledsagare. </p><br>
+
+            <h3>Specialfordon</h3>
+            <p>Du som inte kan genomföra resan med färdtjänst på annat sätt än sittande i din rullstol kan ansöka om
+                tillstånd för specialfordon. </p>
 
         </div>
         <div class="buttons">
             <button class="pink_button"><img src="bilder/application.svg" alt="">&nbsp;Påbörja ansökan</button>
 
-            <p class="p_smaller">Observera att ovan knapp saknar funktionalitet då ett ansökningsformulär för ansökan om färdtjänst ligger utanför uppgiftens beskrivning.</p>
-</div>
-    
+            <p class="p_smaller">Observera att ovan knapp saknar funktionalitet då ett ansökningsformulär för ansökan om
+                färdtjänst ligger utanför uppgiftens beskrivning.</p>
+        </div>
+
 
     </main>
 
     <footer>
         <div class="contact">
-        <h4>Kontakta oss</h4>
-        <span class="phone_mail"><img src="bilder/phone.svg" alt=""><p class="p_small">Telefon: <a href="#">0322 - 00 90 92</a></p></span>
-        <span class="phone_mail"><img src="bilder/mail.svg" alt=""><p class="p_small">E-post: <a href="mailto:kundservice@fardtjanst.se">kundservice@fardtjanst.se</a></p></span>
-    </div>
+            <h4>Kontakta oss</h4>
+            <div class="phone_mail"><img src="bilder/phone.svg" alt="">
+                <p class="p_small">Telefon: <a href="#">0322 - 00 90 92</a></p>
+            </div>
+            <div class="phone_mail"><img src="bilder/mail.svg" alt="">
+                <p class="p_small">E-post: <a href="mailto:kundservice@fardtjanst.se">kundservice@fardtjanst.se</a></p>
+            </div>
+        </div>
 
-    <nav class="footer_links">
-        <h4>Länkar</h4>
-        <ul>
-            <li><a href="ansokan.html">Ansök om färdtjänst</a></li>
-            <li><a href="info.html">Information om färdtjänst</a></li>
-            <li><a href="tillganglighet.html">Tillgänglighetsredogörelse</a></li>
-        </ul>
-    </nav>
+        <nav class="footer_links">
+            <h4>Länkar</h4>
+            <ul>
+                <li><a href="ansokan.html">Ansök om färdtjänst</a></li>
+                <li><a href="info.html">Information om färdtjänst</a></li>
+                <li><a href="tillganglighet.html">Tillgänglighetsredogörelse</a></li>
+            </ul>
+        </nav>
 
-<img class="logo_white" src="bilder/Logotyp_vit.svg" alt="Vår Kommun logotyp">
+        <img class="logo_white" src="bilder/Logotyp_vit.svg" alt="Vår Kommun logotyp">
     </footer>
 </body>
+
 </html>

@@ -33,14 +33,15 @@
         <nav class="main_nav">
             <ul class="large_nav">
                 <li><a href="startsida_inloggad.html">Startsida</a></li>
-                <li><a href="ansokan_inloggad.html">Ansök om färdtjänst</a></li>
+                <li><a class="nav_active" href="ansokan_inloggad.html">Ansök om färdtjänst</a></li>
                 <li><a href="info_inloggad.html">Information om färdtjänst</a></li>
                 <li><a href="boka.html">Boka resa</a></li>
                 <li><a href="mina_resor.html">Mina inbokade resor</a></li>
             </ul>
             <button class="login_btn" onclick="window.location.href='mina_sidor.html';"><img src="bilder/person.svg"
-                    alt="">Mina sidor</button>
+                    alt="">&nbsp;Mina sidor</button>
         </nav>
+
 
         <!--Hamburgermeny-->
         <div id="menu">
@@ -54,9 +55,9 @@
                 <div class="bg_nav">
                     <ul>
                         <li><a href="startsida_inloggad.html">Startsida</a></li>
-                        <li><a href="ansokan_inloggad.html">Ansök om färdtjänst</a></li>
+                        <li><a class="nav_active" href="ansokan_inloggad.html">Ansök om färdtjänst</a></li>
                         <li><a href="info_inloggad.html">Information om färdtjänst</a></li>
-                        <li><a class="nav_active" href="boka.html">Boka resa</a></li>
+                        <li><a href="boka.html">Boka resa</a></li>
                         <li><a href="mina_resor.html">Mina inbokade resor</a></li>
                         <li><a href="index.html"><img src="bilder/logout.svg"
                             alt="">&nbsp;Logga ut</a></li>
@@ -68,24 +69,59 @@
         <div class="menu-bg" id="menu-bg"></div>
         <!--Slut på hamburgermeny-->
     </header>
+
     <div class="breadcrumbs_container">
-        <p class="p_breadcrumbs"><a href="index.html">Startsida</a> / <a href="boka.html">Boka resa</a> /
-            Bokningsbekräftelse</p>
+        <p class="p_breadcrumbs"><a href="index.html">Startsida</a> / Ansök om färdtjänst</p>
     </div>
 
-
     <main>
-        <h1>Tack för din bokning!</h1>
+        <h1>Ansök om färdtjänst</h1>
 
-        <img class="img_check" src="bilder/check_gron.svg" alt="">
+        <div class="text_box">
+            <p>För att påbörja en ansökan om färdtjänst via e-tjänsten behöver du ha en E-legitimation.
+                Du kan läsa mer om hur du skaffar E-legitimation på Skatteverkets hemsida. </p><br>
 
-        <p>En bokningsbekräftelse har skickats till din e-post. Du kan också se dina bokningar under "Mina inbokade
-            resor".</p>
+            <h3>Innan du påbörjar din ansökan ber vi dig att läsa igenom nedanstående information.</h3><br>
+
+            <h3>Färdtjänst</h3>
+            <p>Färdtjänst är särskilt anordnade transporter för personer med funktionshinder och regleras genom lag
+                (1997:736)
+                om färdtjänst. För att beviljas färdtjänst ska du ha ett varaktigt funktionshinder som ger dig
+                väsentliga svårigheter
+                att förflytta dig på egen hand eller svårigheter att resa med allmänna kommunikationer. </p><br>
+
+            <h3>Krav för att få färdtjänst beviljat</h3>
+            <ul class="text_ul">
+                <li>Du ska vara folkbokförd i vår kommun.</li>
+                <li>Du ska ha väsentliga svårigheter att förflytta dig på egen hand eller att resa med allmänna
+                    kommunikationer.</li>
+                <li>Du ska ha en funktionsnedsättning som är bestående i minst tre månader.</li>
+            </ul><br>
 
 
+            <h3>Läkarutlåtande</h3>
+            <p>Om de är första gången du ansöker om färdtjänst behöver du skicka med ett läkarutlåtande.
+                I utlåtandet ska det framgå: </p><br>
+            <ul class="text_ul">
+                <li>din diagnos</li>
+                <li>en beskrivning av dina medicinska problem</li>
+                <li>en beskrivning av hur din diagnos påverkar din förmåga att förflytta dig på egen hand och din
+                    förmåga att resa med den allmänna kollektivtrafiken.</li>
+            </ul><br>
+
+            <h3>Ledsagare</h3>
+            <p>Du som behöver hjälp i fordonet under själva resan kan ansöka om tillstånd för ledsagare. </p><br>
+
+            <h3>Specialfordon</h3>
+            <p>Du som inte kan genomföra resan med färdtjänst på annat sätt än sittande i din rullstol kan ansöka om
+                tillstånd för specialfordon. </p>
+
+        </div>
         <div class="buttons">
-            <button class="pink_button" onclick="window.location.href='mina_resor.html';"><img src="bilder/list.svg"
-                    alt="">&nbsp;Mina inbokade resor</button>
+            <button class="pink_button"><img src="bilder/application.svg" alt="">&nbsp;Påbörja ansökan</button>
+
+            <p class="p_smaller">Observera att ovan knapp saknar funktionalitet då ett ansökningsformulär för ansökan om
+                färdtjänst ligger utanför uppgiftens beskrivning.</p>
         </div>
 
 
@@ -114,6 +150,5 @@
         <img class="logo_white" src="bilder/Logotyp_vit.svg" alt="Vår Kommun logotyp">
     </footer>
 </body>
-
 
 </html>

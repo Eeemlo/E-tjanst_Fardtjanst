@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -39,8 +41,9 @@
                 <li><a href="mina_resor.html">Mina inbokade resor</a></li>
             </ul>
             <button class="login_btn" onclick="window.location.href='mina_sidor.html';"><img src="bilder/person.svg"
-                    alt="">Mina sidor</button>
+                    alt="">&nbsp;Mina sidor</button>
         </nav>
+
 
         <!--Hamburgermeny-->
         <div id="menu">
@@ -56,10 +59,9 @@
                         <li><a href="startsida_inloggad.html">Startsida</a></li>
                         <li><a href="ansokan_inloggad.html">Ansök om färdtjänst</a></li>
                         <li><a href="info_inloggad.html">Information om färdtjänst</a></li>
-                        <li><a class="nav_active" href="boka.html">Boka resa</a></li>
+                        <li><a href="boka.html">Boka resa</a></li>
                         <li><a href="mina_resor.html">Mina inbokade resor</a></li>
-                        <li><a href="index.html"><img src="bilder/logout.svg"
-                            alt="">&nbsp;Logga ut</a></li>
+                        <li><a href="index.html"><img src="bilder/logout.svg" alt="">&nbsp;Logga ut</a></li>
                     </ul>
                 </div>
             </nav>
@@ -68,24 +70,35 @@
         <div class="menu-bg" id="menu-bg"></div>
         <!--Slut på hamburgermeny-->
     </header>
-    <div class="breadcrumbs_container">
-        <p class="p_breadcrumbs"><a href="index.html">Startsida</a> / <a href="boka.html">Boka resa</a> /
-            Bokningsbekräftelse</p>
-    </div>
-
-
     <main>
-        <h1>Tack för din bokning!</h1>
+        <h1>Välkommen till E-tjänsten för färdtjänst!</h1>
 
-        <img class="img_check" src="bilder/check_gron.svg" alt="">
+        <div class="text_box">
+            <p>Färdtjänst är till för fritidsresor och kan göras med antingen personbil eller specialfordon, så som
+                rullstolsbuss.
+                Det är viktigt att notera att färdtjänst inte bokas för resor till sjukhus eller vårdcentraler.
+                Efter en godkänd prövning kan personer med funktionsnedsättningar få färdtjänst.</p><br>
 
-        <p>En bokningsbekräftelse har skickats till din e-post. Du kan också se dina bokningar under "Mina inbokade
-            resor".</p>
+            <p>Denna e-tjänst är utformad för att underlätta för dig som önskar ansöka om färdtjänst och
+                för dig som redan blivit beviljad färdtjänst. Följande tjänster tillhandahålls på denna sida:</p><br>
 
-
+            <div class="list">
+                <p class="p_list">1. Ansök om färdtjänst</p>
+                <p class="p_margin">Om du ännu inte har beviljats färdtjänst kan du enkelt ansöka om det här. </p><br>
+                <p class="p_list">2. Hantera dina resor</p>
+                <p class="p_margin">Om du har beviljats färdtjänst, erbjuder e-tjänsten en smidig plattform för att
+                    boka,
+                    avboka och hantera dina resor.
+                </p>
+            </div>
+            <br>
+            <p class="p_red">För att boka en färdtjänstresa måste du vara inloggad.</p>
+        </div>
         <div class="buttons">
-            <button class="pink_button" onclick="window.location.href='mina_resor.html';"><img src="bilder/list.svg"
-                    alt="">&nbsp;Mina inbokade resor</button>
+            <button class="pink_button" onclick="window.location.href='boka.html';"><img src="bilder/boka.svg"
+                    alt="">&nbsp;Boka färdtjänstresa</button>
+            <button class="pink_button" onclick="window.location.href='info.html';"><img src="bilder/info.svg"
+                    alt="">&nbsp;Information om färdtjänst</button>
         </div>
 
 
@@ -105,9 +118,9 @@
         <nav class="footer_links">
             <h4>Länkar</h4>
             <ul>
-                <li><a href="ansokan.html">Ansök om färdtjänst</a></li>
-                <li><a href="info.html">Information om färdtjänst</a></li>
-                <li><a href="tillganglighet.html">Tillgänglighetsredogörelse</a></li>
+                <li><a href="ansokan_inloggad.html">Ansök om färdtjänst</a></li>
+                <li><a href="info_inloggad.html">Information om färdtjänst</a></li>
+                <li><a href="tillganglighet_inloggad.html">Tillgänglighetsredogörelse</a></li>
             </ul>
         </nav>
 

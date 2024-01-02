@@ -1,65 +1,207 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-tjänst för färdtjänst | Vår Kommun</title>
-    
+
     <link rel="stylesheet" href="layout.css">
+    <script type="text/javascript" src="js.js" defer></script>
 
     <!--Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <!--Logotyp-->
         <div class="logo_section">
-        <a href="index.html"><img class="header_logo" src="bilder/Logotyp.svg" alt="Vår Kommun logotyp"></a>
+            <a href="index.html"><img class="header_logo" src="bilder/Logotyp.svg" alt="Vår Kommun logotyp"></a>
 
-        <!--Funktioner för lyssna & välj språk-->
-        <div class="support_functions">
-        <span class="listen"><a href="#"><img src="bilder/listen_icon.svg" alt="">&nbsp;Lyssna</a></span>
-        <span class="lang"><a href="#"><img src="bilder/globe.svg" alt="">&nbsp;Välj språk <img src="bilder/down.svg" alt=""></a></span>
+            <!--Funktioner för lyssna & välj språk-->
+            <div class="support_functions">
+                <span class="listen"><a href="#"><img src="bilder/listen_icon.svg" alt="">&nbsp;Lyssna</a></span>
+                <span class="lang"><a href="#"><img src="bilder/globe.svg" alt="">&nbsp;Välj språk <img
+                            src="bilder/down.svg" alt=""></a></span>
+            </div>
         </div>
-    </div>
 
         <!--Navigering-->
         <nav class="main_nav">
-            <ul>
-                <li><a href="index.html">Startsida</a></li>
-                <li><a href="ansokan.html">Ansök om färdtjänst</a></li>
-                <li><a href="info.html">Information om färdtjänst</a></li>
+            <ul class="large_nav">
+                <li><a href="startsida_inloggad.html">Startsida</a></li>
+                <li><a href="ansokan_inloggad.html">Ansök om färdtjänst</a></li>
+                <li><a href="info_inloggad.html">Information om färdtjänst</a></li>
                 <li><a href="boka.html">Boka resa</a></li>
-                <li><a href="mina_resor.html">Mina inbokade resor</a></li>
+                <li><a class="nav_active" href="mina_resor.html">Mina inbokade resor</a></li>
             </ul>
-            <a class="login" href="login.html"><button class="login_btn"><img src="bilder/person.svg" alt="">Mina sidor</button></a>
+            <button class="login_btn" onclick="window.location.href='mina_sidor.html';"><img src="bilder/person.svg"
+                    alt="">Mina
+                sidor</button>
+        </nav>
+
+
+        <!--Hamburgermeny-->
+        <div id="menu">
+
+            <div id="menu-bar" onclick="menuOnClick()">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+            </div>
+            <nav class="nav" id="nav">
+                <div class="bg_nav">
+                    <ul>
+                        <li><a href="startsida_inloggad.html">Startsida</a></li>
+                        <li><a href="ansokan_inloggad.html">Ansök om färdtjänst</a></li>
+                        <li><a href="info_inloggad.html">Information om färdtjänst</a></li>
+                        <li><a href="boka.html">Boka resa</a></li>
+                        <li><a class="nav_active" href="mina_resor.html">Mina inbokade resor</a></li>
+                        <li><a href="index.html"><img src="bilder/logout.svg"
+                            alt="">&nbsp;Logga ut</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="menu-bg" id="menu-bg"></div>
+        <!--Slut på hamburgermeny-->
     </header>
 
+    <div class="breadcrumbs_container">
+        <p class="p_breadcrumbs"><a href="index.html">Startsida</a> / <a href="mina_sidor.html">Mina sidor</a> / Mina
+            inbokade resor</p>
+    </div>
+
     <main>
-        <h1>Välkommen</h1>
-    
+        <h1>Mina inbokade resor</h1>
+        <div class="text_box">
+
+
+            <h3>Måndag 18/12 kl 08:00</h3>
+            <div class="bokad_resa1">
+                <div class="reseinfo">
+                    <p class="p_bold">Från:</p>&nbsp;
+                    <p>Simmenäsvägen 7</p>
+                </div>
+                <div class="reseinfo">
+                    <p class="p_bold">Till:</p>&nbsp;
+                    <p>Trädgårdsgatan 3</p>
+                </div>
+                <div class="reseinfo">
+                    <p class="p_bold">Medresenärer:</p>&nbsp;
+                    <p>Jag reser själv</p>
+                </div>
+                <div class="reseinfo">
+                    <p class="p_bold">Returresa:</p>&nbsp;
+                    <p>kl 16:00</p>
+                </div>
+
+            </div>
+
+            <div class="bokad_resa2">
+                <div class="reseinfo">
+                    <p class="p_bold">Återkommande resa:</p>&nbsp;
+                    <p>Varje vecka</p>
+                </div>
+                <div class="reseinfo">
+                    <p class="p_bold">Rullstolsanpassad bil krävs:</p>&nbsp;
+                    <p>Nej</p>
+                </div>
+                <div class="reseinfo">
+                    <p class="p_bold">Djur medföljer:</p>&nbsp;
+                    <p>Nej</p>
+                </div>
+                <div class="reseinfo">
+                    <p class="p_bold">Kostnad:</p>&nbsp;
+                    <p>112 kr</p>
+                </div>
+
+            </div>
+
+            <div class="resa_buttons">
+                <button class="green_button"><img src="bilder/login.svg" alt="">&nbsp;Ändra resa</button>
+                <button class="red_button"><img src="bilder/login.svg" alt="">&nbsp;Avboka resa</button>
+            </div>
+        </div>
+
+        <div class="text_box">
+
+
+            <h3>Fredag 5/1 kl 18:00</h3>
+            <div class="bokad_resa1">
+                <div class="reseinfo">
+                    <p class="p_bold">Från:</p>&nbsp;
+                    <p>Simmenäsvägen 7</p>
+                </div>
+                <div class="reseinfo">
+                    <p class="p_bold">Till:</p>&nbsp;
+                    <p>Lindekullegatan 3</p>
+                </div>
+                <div class="reseinfo">
+                    <p class="p_bold">Medresenärer:</p>&nbsp;
+                    <p>Jag reser själv</p>
+                </div>
+                <div class="reseinfo">
+                    <p class="p_bold">Returresa:</p>&nbsp;
+                    <p> Nej</p>
+                </div>
+
+            </div>
+
+            <div class="bokad_resa2">
+                <div class="reseinfo">
+                    <p class="p_bold">Återkommande resa:</p>&nbsp;
+                    <p>Nej</p>
+                </div>
+                <div class="reseinfo">
+                    <p class="p_bold">Rullstolsanpassad bil krävs:</p>&nbsp;
+                    <p>Nej</p>
+                </div>
+                <div class="reseinfo">
+                    <p class="p_bold">Djur medföljer:</p>&nbsp;
+                    <p>Nej</p>
+                </div>
+                <div class="reseinfo">
+                    <p class="p_bold">Kostnad:</p>&nbsp;
+                    <p>56 kr</p>
+                </div>
+
+            </div>
+
+            <div class="resa_buttons">
+                <button class="green_button"><img src="bilder/login.svg" alt="">&nbsp;Ändra resa</button>
+                <button class="red_button"><img src="bilder/login.svg" alt="">&nbsp;Avboka resa</button>
+            </div>
+        </div>
 
     </main>
 
     <footer>
         <div class="contact">
-        <h4>Kontakta oss</h4>
-        <span class="phone_mail"><img src="bilder/phone.svg" alt=""><p class="p_small">Telefon: <a href="#">0322 - 00 90 92</a></p></span>
-        <span class="phone_mail"><img src="bilder/mail.svg" alt=""><p class="p_small">E-post: <a href="mailto:kundservice@fardtjanst.se">kundservice@fardtjanst.se</a></p></span>
-    </div>
+            <h4>Kontakta oss</h4>
+            <div class="phone_mail"><img src="bilder/phone.svg" alt="">
+                <p class="p_small">Telefon: <a href="#">0322 - 00 90 92</a></p>
+            </div>
+            <div class="phone_mail"><img src="bilder/mail.svg" alt="">
+                <p class="p_small">E-post: <a href="mailto:kundservice@fardtjanst.se">kundservice@fardtjanst.se</a></p>
+            </div>
+        </div>
 
-    <nav class="footer_links">
-        <h4>Länkar</h4>
-        <ul>
-            <li><a href="ansokan.html">Ansök om färdtjänst</a></li>
-            <li><a href="info.html">Information om färdtjänst</a></li>
-            <li><a href="tillganglighet.html">Tillgänglighetsredogörelse</a></li>
-        </ul>
-    </nav>
+        <nav class="footer_links">
+            <h4>Länkar</h4>
+            <ul>
+                <li><a href="ansokan.html">Ansök om färdtjänst</a></li>
+                <li><a href="info.html">Information om färdtjänst</a></li>
+                <li><a href="tillganglighet.html">Tillgänglighetsredogörelse</a></li>
+            </ul>
+        </nav>
 
-<img class="logo_white" src="bilder/Logotyp_vit.svg" alt="Vår Kommun logotyp">
+        <img class="logo_white" src="bilder/Logotyp_vit.svg" alt="Vår Kommun logotyp">
     </footer>
 </body>
+
 </html>
