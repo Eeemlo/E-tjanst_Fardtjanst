@@ -71,7 +71,7 @@ p {
 }
 
 .p_red {
-    color: red;
+    color: #950000;
     font-weight: 600;
 }
 
@@ -116,11 +116,11 @@ ol {
     }
 
     h2 {
-        font-size: 1.75em;
+        font-size: 1.4em;
     }
 
     h3 {
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
 
     p {
@@ -389,7 +389,7 @@ main {
 }
 
 .text_box {
-    background-color: #f8f8f8;
+    background-color: #fff;
     padding: 2em;
     margin: 2em 1em;
 }
@@ -647,7 +647,7 @@ footer {
     line-height: 200%;
 }
 
-footer h4 {
+footer h3 {
     color: white;
 }
 
@@ -690,8 +690,8 @@ footer a:hover {
     margin: 2em 0 2em 20%;
 }
 
-.footer_links h4 {
-    margin-left: 2em;
+.footer_links h3 {
+    margin-left: 1.9em;
 }
 
 /*Footer sektion 3*/
@@ -720,7 +720,7 @@ footer a:hover {
         margin-left: -6%;
     }
 
-    .footer_links h4 {
+    .footer_links h3 {
         margin-left: 0%;
     }
 
@@ -748,7 +748,7 @@ footer a:hover {
         margin-left: -11%;
     }
 
-    .footer_links h4 {
+    .footer_links h3 {
         margin-left: 0%;
     }
 
