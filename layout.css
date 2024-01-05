@@ -578,6 +578,12 @@ form div {
 
 /*Inbokade resor*/
 
+.text_box_resa {
+    background-color: #f7f7f8;
+    padding: 2em;
+    margin: 2em 1em;
+}
+
 .bokad_resa1,
 .bokad_resa2 {
     display: inline-block;
@@ -647,8 +653,9 @@ footer {
     line-height: 200%;
 }
 
-footer h3 {
+footer h2 {
     color: white;
+    font-size: 1.2em;
 }
 
 
