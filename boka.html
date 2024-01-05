@@ -103,14 +103,14 @@
                         </p><br>
                     </div>
                     <div class="form_row_3">
-                        <p><label for="antal">Antal medresenärer:</label><br>
+                        <p><label for="antal">Totalt antal resenärer:</label><br>
                             <select name="antal" id="antal">
                                 <option value="ensam">Jag reser själv</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
+                                <option value="1">2</option>
+                                <option value="2">3</option>
+                                <option value="3">4</option>
+                                <option value="4">5</option>
+                                <option value="5">6</option>
                             </select>
                         </p><br>
                         <div class="double_checkbox">
@@ -127,8 +127,8 @@
 
                     <div class="full_row">
                         <div class="content_box">
-                            <p class="check1" onclick="showDiv1();"><input type="checkbox" id="retur" name="retur">
-                                <label for="retur">Lägg till returresa</label>
+                            <p class="check1"><input type="checkbox" id="retur_check" name="retur">
+                                <label for="retur" id="retur_label">Lägg till returresa</label>
                             </p>
                             <div class="returresa" id="returresa">
                                 <p><label for="tid_retur">Tid för returresa:</label><br>
@@ -138,7 +138,7 @@
                         </div>
 
                         <div class="content_box">
-                            <p class="check2" onclick="showDiv2();"><input type="checkbox" id="aterkommande"
+                            <p class="check2"><input type="checkbox" id="aterkommande_check"
                                     name="aterkommande">
                                 <label for="aterkommande">Gör till återkommande resa</label>
                             </p>
@@ -148,8 +148,11 @@
                                 <p><label for="intervall">I vilket intervall ska resan upprepas?</label><br>
                                     <select name="intervall" id="intervall">
                                         <option value="dag">Varje dag</option>
+                                        <option value="dag">Varannan dag</option>
                                         <option value="vecka">Varje vecka</option>
+                                        <option value="vecka">Varannan vecka</option>
                                         <option value="manad">Varje månad</option>
+                                        <option value="manad">Varannan månad</option>
                                     </select>
                                 </p>
 
@@ -162,7 +165,7 @@
 
             <!--Knapp-->
             <div class="buttons">
-                <button class="pink_button" onclick="window.location.href='bokningsbekraftelse.html';"><img
+                <button class="pink_button" id="boka_button" onclick="window.location.href='bokningsbekraftelse.html';"><img
                         src="bilder/check.svg" alt="">&nbsp;Boka resa</button>
             </div>
         </div>
@@ -193,28 +196,7 @@
 
         <img class="logo_white" src="bilder/Logotyp_vit.svg" alt="Vår Kommun logotyp">
     </footer>
-    <script>
-        function showDiv1() {
-            let div = document.getElementById('returresa');
 
-            if (div.style.display === "none") {
-                div.style.display = "block";
-            } else {
-                div.style.display = "none";
-            }
-        }
-
-        function showDiv2() {
-            let div = document.getElementById('intervall_aterkommande');
-
-            if (div.style.display === "none") {
-                div.style.display = "block";
-            } else {
-                div.style.display = "none";
-            }
-        }
-
-    </script>
 </body>
 
 
